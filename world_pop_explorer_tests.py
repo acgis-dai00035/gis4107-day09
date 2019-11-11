@@ -49,42 +49,46 @@ def test_get_country_count():
 
 def test_conv_num_with_commas():
     """Test for conversion of text 1,000 to number 1000"""
-    number_text = '1,000'
-    expected = 1000
-    actual = wpe.conv_num_with_commas(number_text)
+    num_text = '1,000'
+    expected= 1000
+    actual= wpe.conv_num_with_commas(num_text)
     print_test_results(wpe.conv_num_with_commas, expected, actual)
 
 def test_get_top_five_countries():
     """Test for top five countries where China is 1st and Brazil 5th"""
-    expected = ['China', 'India', 'United States', 'Indonesia', 'Brazil']
-    actual = wpe.get_top_five_countries()
+    expected= ['China','India', 'United States', 'Indonesia', 'Brazil']
+    actual=wpe.get_top_five_countries()
     print_test_results(wpe.get_top_five_countries, expected, actual)
+
 
 def test_set_country_populations_dict():
     """Test for the country Réunion"""
-    country_name = 'Canada'
-    expected = (36624199, '+0.9%')
-    actual = wpe.set_country_populations_dict()[country_name]
+    country_name = 'India'
+    expected= (1339180127, '+1.1%')
+    actual= wpe.set_country_populations_dict () [country_name]
     print_test_results(wpe.set_country_populations_dict, expected, actual)
 
 def test_get_population():
     """Test for the country Réunion"""
-    country_name ='Canada'
-    expected = 36624199
-    actual = wpe.get_population(country_name)
+    country_name = 'India'
+    expected= 1339180127
+    actual= wpe.get_population(country_name)
     print_test_results(wpe.get_population, expected, actual)
+
 
 def test_get_continents():
     """Test for number of continents"""
-    expected = ['Europe', 'Oceania', 'Africa', 'Asia', 'Americas']
-    actual = wpe.get_continents()
+    expected= ['Europe', 'Oceania', 'Africa', 'Asia', 'Americas']
+    actual=wpe.get_continents()
     print_test_results(wpe.get_continents, expected, actual)
+
 
 def test_get_continent_populations():
     """Test for population of Asia being larger than 4.5B"""
-    expected = {'Europe': 743253404, 'Oceania': 40690786, 'Africa': 1256268025, 'Asia': 4503248822L, 'Americas': 1006801064}
-    actual = wpe.get_continent_populations()
+    expected={'Europe': 743253404, 'Oceania': 40690786, 'Africa': 1256268025, 'Asia': 4503248822L, 'Americas': 1006801064}
+    actual= wpe.get_continent_populations()
     print_test_results(wpe.get_continent_populations, expected, actual)
+
 
 
 # ------------------------------------------------------------------------------
